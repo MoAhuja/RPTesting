@@ -1,0 +1,10 @@
+services:
+  rp:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ..:/workspace
+
+

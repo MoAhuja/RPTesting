@@ -1,0 +1,21 @@
+{
+  "name": "@azure-tools/typespec-providerhub-template",
+  "version": "1.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"Nothing to do for template.\""
+  },
+  "dependencies": {
+    "@typespec/compiler": "~0.52.0",
+    "@typespec/openapi": "~0.52.0",
+    "@typespec/rest": "~0.52.0",
+    "@typespec/http": "~0.52.0",
+    "@typespec/versioning": "~0.52.0",
+    "@azure-tools/typespec-autorest": "~0.38.0",
+    "@azure-tools/typespec-azure-core": "~0.38.0",
+    "@azure-tools/typespec-providerhub": "~0.38.1",
+    "@azure-tools/typespec-providerhub-controller": "~0.38.1",
+    "@azure-tools/typespec-azure-resource-manager": "~0.38.0"
+  }
+}
