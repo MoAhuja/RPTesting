@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Microsoft.MyResourceProvider",
+    "title": "Private.Porter",
     "version": "2021-08-01-preview",
     "x-typespec-generated": [
       {
@@ -46,7 +46,7 @@
     }
   ],
   "paths": {
-    "/providers/Microsoft.MyResourceProvider/operations": {
+    "/providers/Private.Porter/operations": {
       "get": {
         "operationId": "Operations_List",
         "tags": [
@@ -55,20 +55,20 @@
         "description": "List the operations for the provider",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/OperationListResult"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/OperationListResult"
             }
           },
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         },
@@ -77,32 +77,32 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/providers/Microsoft.MyResourceProvider/Metadatas": {
+    "/subscriptions/{subscriptionId}/providers/Private.Porter/moTest": {
       "get": {
         "operationId": "Metadatas_ListBySubscription",
         "tags": [
           "Metadatas"
         ],
-        "description": "List Metadata resources by subscription ID",
+        "description": "List MoTestRPModel resources by subscription ID",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/MetadataListResult"
+              "$ref": "#/definitions/MoTestRPModelListResult"
             }
           },
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         },
@@ -111,35 +111,35 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MyResourceProvider/Metadatas": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Private.Porter/moTest": {
       "get": {
         "operationId": "Metadatas_ListByResourceGroup",
         "tags": [
           "Metadatas"
         ],
-        "description": "List Metadata resources by resource group",
+        "description": "List MoTestRPModel resources by resource group",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           }
         ],
         "responses": {
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/MetadataListResult"
+              "$ref": "#/definitions/MoTestRPModelListResult"
             }
           },
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         },
@@ -148,22 +148,22 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MyResourceProvider/Metadatas/{MetadataName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Private.Porter/moTest/{MetadataName}": {
       "get": {
         "operationId": "Metadatas_Get",
         "tags": [
           "Metadatas"
         ],
-        "description": "Get a Metadata",
+        "description": "Get a MoTestRPModel",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
             "name": "MetadataName",
@@ -178,13 +178,13 @@
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTestRPModel"
             }
           },
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         },
@@ -199,16 +199,16 @@
         "tags": [
           "Metadatas"
         ],
-        "description": "Create a Metadata",
+        "description": "Create a MoTestRPModel",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
             "name": "MetadataName",
@@ -224,21 +224,21 @@
             "description": "Resource create parameters.",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTestRPModel"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Resource 'Metadata' update operation succeeded",
+            "description": "Resource 'MoTestRPModel' update operation succeeded",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTestRPModel"
             }
           },
           "201": {
-            "description": "Resource 'Metadata' create operation succeeded",
+            "description": "Resource 'MoTestRPModel' create operation succeeded",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTestRPModel"
             },
             "headers": {
               "Retry-After": {
@@ -251,7 +251,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         },
@@ -270,16 +270,16 @@
         "tags": [
           "Metadatas"
         ],
-        "description": "Update a Metadata",
+        "description": "Update a MoTestRPModel",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
             "name": "MetadataName",
@@ -295,7 +295,7 @@
             "description": "The resource properties to be updated.",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/MetadataUpdate"
+              "$ref": "#/definitions/MoTestRPModelUpdate"
             }
           }
         ],
@@ -303,13 +303,13 @@
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTestRPModel"
             }
           },
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         }
@@ -319,16 +319,16 @@
         "tags": [
           "Metadatas"
         ],
-        "description": "Delete a Metadata",
+        "description": "Delete a MoTestRPModel",
         "parameters": [
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
             "name": "MetadataName",
@@ -349,7 +349,7 @@
           "default": {
             "description": "An unexpected error response.",
             "schema": {
-              "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
+              "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
         }
@@ -357,12 +357,12 @@
     }
   },
   "definitions": {
-    "Metadata": {
+    "MoTestRPModel": {
       "type": "object",
       "description": "A MyResourceProviderProviderHub resource",
       "properties": {
         "properties": {
-          "$ref": "#/definitions/MetadataProperties",
+          "$ref": "#/definitions/MoTestRPProperties",
           "description": "The resource-specific properties for this resource.",
           "x-ms-client-flatten": true,
           "x-ms-mutability": [
@@ -373,19 +373,19 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../../../common-types/resource-management/v5/types.json#/definitions/TrackedResource"
+          "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/TrackedResource"
         }
       ]
     },
-    "MetadataListResult": {
+    "MoTestRPModelListResult": {
       "type": "object",
-      "description": "The response of a Metadata list operation.",
+      "description": "The response of a MoTestRPModel list operation.",
       "properties": {
         "value": {
           "type": "array",
-          "description": "The Metadata items on this page",
+          "description": "The MoTestRPModel items on this page",
           "items": {
-            "$ref": "#/definitions/Metadata"
+            "$ref": "#/definitions/MoTestRPModel"
           }
         },
         "nextLink": {
@@ -398,20 +398,9 @@
         "value"
       ]
     },
-    "MetadataProperties": {
+    "MoTestRPModelUpdate": {
       "type": "object",
-      "description": "Details of the MyResourceProvider Metadata.",
-      "properties": {
-        "provisioningState": {
-          "$ref": "#/definitions/ProvisioningState",
-          "description": "The status of the last operation.",
-          "readOnly": true
-        }
-      }
-    },
-    "MetadataUpdate": {
-      "type": "object",
-      "description": "The type used for update operations of the Metadata.",
+      "description": "The type used for update operations of the MoTestRPModel.",
       "properties": {
         "tags": {
           "type": "object",
@@ -419,6 +408,17 @@
           "additionalProperties": {
             "type": "string"
           }
+        }
+      }
+    },
+    "MoTestRPProperties": {
+      "type": "object",
+      "description": "Details of the MyResourceProvider Metadata.",
+      "properties": {
+        "provisioningState": {
+          "$ref": "#/definitions/ProvisioningState",
+          "description": "The status of the last operation.",
+          "readOnly": true
         }
       }
     },

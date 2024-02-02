@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hFpquD97z68Nl8f2Dlqkaa4yVFCkFlFNxuxIP4pBBLQ=",
+  "Source": "testRP",
+  "BasePath": "_content/testRP",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

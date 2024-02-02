@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="**\node_modules\**" />
@@ -21,12 +21,20 @@
     <ProjectReference Include="..\typespec\typespec.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <TypeSpecCompile Include="..\typespec\typespec\main.tsp"
-                     CommandPath="$(MSBuildProjectDirectory)/../typespec/typespec/node_modules/.bin"
-                     OutputDir="$(MSBuildProjectDirectory)"
-                     Options="@azure-tools/typespec-providerhub-controller.registration-output-path=$(MSBuildProjectDirectory)/onebox/registrations;@azure-tools/typespec-providerhub-controller.code-kind=controller;@azure-tools/typespec-providerhub-controller.include-cancellation-token=true;@azure-tools/typespec-providerhub-controller.include-subscription-lifecycle-controller=true;@azure-tools/typespec-providerhub-controller.include-versioning-classes=true"
-                     Emitters="@azure-tools/typespec-providerhub-controller" />
+	<ItemGroup>
+		<Compile Include="generated\**" />
+		<Compile Include="..\typespec\generated\models\**" />
+
+
+	</ItemGroup>
+
+<ItemGroup>
+    <TypeSpecCompile Include="..\typespec\typespec\main.tsp" CommandPath="$(MSBuildProjectDirectory)/../typespec/typespec/node_modules/.bin" OutputDir="$(MSBuildProjectDirectory)" Options="@azure-tools/typespec-providerhub-controller.registration-output-path=$(MSBuildProjectDirectory)/onebox/registrations;@azure-tools/typespec-providerhub-controller.code-kind=controller;@azure-tools/typespec-providerhub-controller.include-cancellation-token=true;@azure-tools/typespec-providerhub-controller.include-subscription-lifecycle-controller=true;@azure-tools/typespec-providerhub-controller.include-versioning-classes=true" Emitters="@azure-tools/typespec-providerhub-controller" />
   </ItemGroup>
+
+<ItemGroup>
+  <Folder Include="RPImplementation\" />
+</ItemGroup>
+  
 
 </Project>
