@@ -58,12 +58,17 @@ model MoTestRPProperties {
   provisioningState?: ProvisioningState;
 }
 
-@armResourceOperations(MoTestRPModel)
-interface Metadatas {
-  get is ArmResourceRead<MoTestRPModel>;
-  createOrUpdate is ArmResourceCreateOrReplaceAsync<MoTestRPModel>;
-  update is ArmResourcePatchSync<MoTestRPModel, MoTestRPProperties>;
-  delete is ArmResourceDeleteSync<MoTestRPModel>;
-  listByResourceGroup is ArmResourceListByParent<MoTestRPModel>;
-  listBySubscription is ArmListBySubscription<MoTestRPModel>;
-}
+
+//@armResourceOperations(MoTestRPModel)
+//interface Metadatas {
+//  get is ArmResourceRead<MoTestRPModel>;
+ // createOrUpdate is ArmResourceCreateOrReplaceAsync<MoTestRPModel>;
+  //update is ArmResourcePatchSync<MoTestRPModel, MoTestRPProperties>;
+  //delete is ArmResourceDeleteSync<MoTestRPModel>;
+  //listByResourceGroup is ArmResourceListByParent<MoTestRPModel>;
+  //listBySubscription is ArmListBySubscription<MoTestRPModel>;
+//}
+
+
+@armResourceOperations
+interface moTest extends TrackedResourceOperations<MoTestRPModel, MoTestRPProperties> {}

@@ -1,7 +1,7 @@
 {
+  "typespec.tsp-server.path": "${workspaceFolder}/testRP/src/typespec/typespec/node_modules/@typespec/compiler",
   "ExpandedNodes": [
     ""
   ],
-  "SelectedNode": "\\testRP.sln",
   "PreviewInSolutionExplorer": false
 }
