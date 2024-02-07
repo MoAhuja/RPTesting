@@ -6,7 +6,7 @@
 using Microsoft.TypeSpec.ProviderHub.Controller;
 using Newtonsoft.Json;
 
-namespace Microsoft.MyResourceProvider.Service.Models
+namespace Microsoft.Porter.Service.Models
 {
     [JsonConverter(typeof(EnumJsonConverter<ProvisioningState>))]
     public readonly partial struct ProvisioningState

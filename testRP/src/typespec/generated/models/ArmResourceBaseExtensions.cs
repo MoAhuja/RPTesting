@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Microsoft.TypeSpec.ProviderHub.Controller;
 
-namespace Microsoft.MyResourceProvider.Service.Models
+namespace Microsoft.Porter.Service.Models
 {
     /// <summary>
     /// Extensions for easy PUT and PATCH copying of a resource

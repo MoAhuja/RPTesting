@@ -37,5 +37,25 @@ public class Startup
         app.UseEndpoints(endpoints =>
             endpoints.MapControllers()
         );
+
+        //app.UseEndpoints(endpoints =>
+        //{
+
+        //    endpoints.Map("{*url}", async context =>
+        //    {
+        //        System.Console.WriteLine("Request details:");
+        //        System.Console.WriteLine($"Method: {context.Request.Method}");
+        //        System.Console.WriteLine($"Path: {context.Request.Path}");
+        //        System.Console.WriteLine($"QueryString: {context.Request.QueryString}");
+        //        System.Console.WriteLine("Headers:");
+        //        foreach (var header in context.Request.Headers)
+        //        {
+        //            System.Console.WriteLine($"\t{header.Key}: {header.Value}");
+        //        }
+        //        context.Response.StatusCode = 200;
+        //    });
+        //});
+
+    
     }
 }

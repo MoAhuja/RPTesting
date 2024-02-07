@@ -17,17 +17,17 @@ using Azure.ResourceManager;
 })
 @useDependency(Azure.ResourceManager.Versions.v1_0_Preview_1)
 @armCommonTypesVersion(Azure.ResourceManager.CommonTypes.Versions.v5)
-namespace Microsoft.MyResourceProvider;
+namespace Private.Porter;
 
 interface Operations extends Azure.ResourceManager.Operations {}
 
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-path-segment-invalid-chars" "Existing Template"
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-key-invalid-chars" "Existing template"
-@doc("A MyResourceProviderProviderHub resource")
-model MoTestRPModel is TrackedResource<MoTestRPProperties> {
-  @doc("The name of the employee")
+@doc("A Private.Porter resource")
+model MoTest is TrackedResource<MoTestProperties> {
+  @doc("The name of the moTest resource")
   @pattern("^[a-zA-Z0-9-]{3,24}$")
-  @key("MetadataName")
+  @key("Name")
   @segment("moTest")
   @path
   name: string;
@@ -51,24 +51,12 @@ enum ProvisioningState {
   Accepted,
 }
 
-@doc("Details of the MyResourceProvider Metadata.")
-model MoTestRPProperties {
+@doc("Details of the Contoso Database.")
+model MoTestProperties {
   @visibility("read")
   @doc("The status of the last operation.")
   provisioningState?: ProvisioningState;
 }
 
-
-//@armResourceOperations(MoTestRPModel)
-//interface Metadatas {
-//  get is ArmResourceRead<MoTestRPModel>;
- // createOrUpdate is ArmResourceCreateOrReplaceAsync<MoTestRPModel>;
-  //update is ArmResourcePatchSync<MoTestRPModel, MoTestRPProperties>;
-  //delete is ArmResourceDeleteSync<MoTestRPModel>;
-  //listByResourceGroup is ArmResourceListByParent<MoTestRPModel>;
-  //listBySubscription is ArmListBySubscription<MoTestRPModel>;
-//}
-
-
 @armResourceOperations
-interface moTest extends TrackedResourceOperations<MoTestRPModel, MoTestRPProperties> {}
+interface moTest extends TrackedResourceOperations<MoTest, MoTestProperties> {}

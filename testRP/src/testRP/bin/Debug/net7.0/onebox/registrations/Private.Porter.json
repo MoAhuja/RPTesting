@@ -2,9 +2,9 @@
   "properties": {
     "providerType": "Hidden",
     "management": {
-      "incidentRoutingService": "MyResourceProvider Resource Provider",
-      "incidentRoutingTeam": "MyResourceProvider Triage",
-      "incidentContactEmail": "helpme@MyResourceProvider.com"
+      "incidentRoutingService": "Porter Resource Provider",
+      "incidentRoutingTeam": "Porter Triage",
+      "incidentContactEmail": "helpme@Porter.com"
     },
     "enableTenantLinkedNotification": false
   }

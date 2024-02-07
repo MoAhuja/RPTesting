@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Microsoft.TypeSpec.ProviderHub.Controller;
 
-namespace Microsoft.MyResourceProvider.Service.Models
+namespace Microsoft.Porter.Service.Models
 {
     /// <summary>
     /// Base class used for type definitions

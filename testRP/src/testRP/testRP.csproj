@@ -5,9 +5,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="**\node_modules\**" />
+    <Content Remove="RPImplementation\**" />
     <Compile Remove="**\node_modules\**" />
+    <Compile Remove="RPImplementation\**" />
     <EmbeddedResource Remove="**\node_modules\**" />
+    <EmbeddedResource Remove="RPImplementation\**" />
     <None Remove="**\node_modules\**" />
+    <None Remove="RPImplementation\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +37,7 @@
   </ItemGroup>
 
 <ItemGroup>
-  <Folder Include="RPImplementation\" />
+  <Watch Remove="RPImplementation\**" />
 </ItemGroup>
   
 

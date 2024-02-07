@@ -42,7 +42,7 @@
       "name": "Operations"
     },
     {
-      "name": "Metadatas"
+      "name": "moTest"
     }
   ],
   "paths": {
@@ -77,13 +77,13 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/providers/Private.Porter/Metadatas": {
+    "/subscriptions/{subscriptionId}/providers/Private.Porter/moTest": {
       "get": {
-        "operationId": "Metadatas_ListBySubscription",
+        "operationId": "MoTest_ListBySubscription",
         "tags": [
-          "Metadatas"
+          "moTest"
         ],
-        "description": "List Metadata resources by subscription ID",
+        "description": "List MoTest resources by subscription ID",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
@@ -96,7 +96,7 @@
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/MetadataListResult"
+              "$ref": "#/definitions/MoTestListResult"
             }
           },
           "default": {
@@ -111,13 +111,13 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Private.Porter/Metadatas": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Private.Porter/moTest": {
       "get": {
-        "operationId": "Metadatas_ListByResourceGroup",
+        "operationId": "MoTest_ListByResourceGroup",
         "tags": [
-          "Metadatas"
+          "moTest"
         ],
-        "description": "List Metadata resources by resource group",
+        "description": "List MoTest resources by resource group",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
@@ -133,7 +133,7 @@
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/MetadataListResult"
+              "$ref": "#/definitions/MoTestListResult"
             }
           },
           "default": {
@@ -148,13 +148,13 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Private.Porter/Metadatas/{MetadataName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Private.Porter/moTest/{Name}": {
       "get": {
-        "operationId": "Metadatas_Get",
+        "operationId": "MoTest_Get",
         "tags": [
-          "Metadatas"
+          "moTest"
         ],
-        "description": "Get a Metadata",
+        "description": "Get a MoTest",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
@@ -166,9 +166,9 @@
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "MetadataName",
+            "name": "Name",
             "in": "path",
-            "description": "The name of the employee",
+            "description": "The name of the moTest resource",
             "required": true,
             "type": "string",
             "pattern": "^[a-zA-Z0-9-]{3,24}$"
@@ -178,7 +178,7 @@
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTest"
             }
           },
           "default": {
@@ -187,19 +187,14 @@
               "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
-        },
-        "x-ms-examples": {
-          "GetMetadata": {
-            "$ref": "./examples/Metadatas_Get.json"
-          }
         }
       },
       "put": {
-        "operationId": "Metadatas_CreateOrUpdate",
+        "operationId": "MoTest_CreateOrUpdate",
         "tags": [
-          "Metadatas"
+          "moTest"
         ],
-        "description": "Create a Metadata",
+        "description": "Create a MoTest",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
@@ -211,9 +206,9 @@
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "MetadataName",
+            "name": "Name",
             "in": "path",
-            "description": "The name of the employee",
+            "description": "The name of the moTest resource",
             "required": true,
             "type": "string",
             "pattern": "^[a-zA-Z0-9-]{3,24}$"
@@ -224,21 +219,21 @@
             "description": "Resource create parameters.",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTest"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Resource 'Metadata' update operation succeeded",
+            "description": "Resource 'MoTest' update operation succeeded",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTest"
             }
           },
           "201": {
-            "description": "Resource 'Metadata' create operation succeeded",
+            "description": "Resource 'MoTest' create operation succeeded",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTest"
             },
             "headers": {
               "Retry-After": {
@@ -255,22 +250,17 @@
             }
           }
         },
-        "x-ms-examples": {
-          "CreateMetadata": {
-            "$ref": "./examples/Metadatas_CreateOrUpdate.json"
-          }
-        },
         "x-ms-long-running-operation-options": {
           "final-state-via": "azure-async-operation"
         },
         "x-ms-long-running-operation": true
       },
       "patch": {
-        "operationId": "Metadatas_Update",
+        "operationId": "MoTest_Update",
         "tags": [
-          "Metadatas"
+          "moTest"
         ],
-        "description": "Update a Metadata",
+        "description": "Update a MoTest",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
@@ -282,9 +272,9 @@
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "MetadataName",
+            "name": "Name",
             "in": "path",
-            "description": "The name of the employee",
+            "description": "The name of the moTest resource",
             "required": true,
             "type": "string",
             "pattern": "^[a-zA-Z0-9-]{3,24}$"
@@ -295,7 +285,7 @@
             "description": "The resource properties to be updated.",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/MetadataUpdate"
+              "$ref": "#/definitions/MoTestUpdate"
             }
           }
         ],
@@ -303,7 +293,7 @@
           "200": {
             "description": "ARM operation completed successfully.",
             "schema": {
-              "$ref": "#/definitions/Metadata"
+              "$ref": "#/definitions/MoTest"
             }
           },
           "default": {
@@ -315,11 +305,11 @@
         }
       },
       "delete": {
-        "operationId": "Metadatas_Delete",
+        "operationId": "MoTest_Delete",
         "tags": [
-          "Metadatas"
+          "moTest"
         ],
-        "description": "Delete a Metadata",
+        "description": "Delete a MoTest",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter"
@@ -331,9 +321,9 @@
             "$ref": "../../../../../common-types/resource-management/v5/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "MetadataName",
+            "name": "Name",
             "in": "path",
-            "description": "The name of the employee",
+            "description": "The name of the moTest resource",
             "required": true,
             "type": "string",
             "pattern": "^[a-zA-Z0-9-]{3,24}$"
@@ -342,6 +332,20 @@
         "responses": {
           "200": {
             "description": "Resource deleted successfully."
+          },
+          "202": {
+            "description": "Resource deletion accepted.",
+            "headers": {
+              "Retry-After": {
+                "type": "integer",
+                "format": "int32",
+                "description": "The Retry-After header can indicate how long the client should wait before polling the operation status."
+              },
+              "Location": {
+                "type": "string",
+                "description": "The Location header contains the URL where the status of the long running operation can be checked."
+              }
+            }
           },
           "204": {
             "description": "Resource deleted successfully."
@@ -352,17 +356,21 @@
               "$ref": "../../../../../common-types/resource-management/v5/types.json#/definitions/ErrorResponse"
             }
           }
-        }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "location"
+        },
+        "x-ms-long-running-operation": true
       }
     }
   },
   "definitions": {
-    "Metadata": {
+    "MoTest": {
       "type": "object",
-      "description": "A MyResourceProviderProviderHub resource",
+      "description": "A Private.Porter resource",
       "properties": {
         "properties": {
-          "$ref": "#/definitions/MetadataProperties",
+          "$ref": "#/definitions/MoTestProperties",
           "description": "The resource-specific properties for this resource.",
           "x-ms-client-flatten": true,
           "x-ms-mutability": [
@@ -377,15 +385,15 @@
         }
       ]
     },
-    "MetadataListResult": {
+    "MoTestListResult": {
       "type": "object",
-      "description": "The response of a Metadata list operation.",
+      "description": "The response of a MoTest list operation.",
       "properties": {
         "value": {
           "type": "array",
-          "description": "The Metadata items on this page",
+          "description": "The MoTest items on this page",
           "items": {
-            "$ref": "#/definitions/Metadata"
+            "$ref": "#/definitions/MoTest"
           }
         },
         "nextLink": {
@@ -398,9 +406,9 @@
         "value"
       ]
     },
-    "MetadataProperties": {
+    "MoTestProperties": {
       "type": "object",
-      "description": "Details of the MyResourceProvider Metadata.",
+      "description": "Details of the Contoso Database.",
       "properties": {
         "provisioningState": {
           "$ref": "#/definitions/ProvisioningState",
@@ -409,9 +417,9 @@
         }
       }
     },
-    "MetadataUpdate": {
+    "MoTestUpdate": {
       "type": "object",
-      "description": "The type used for update operations of the Metadata.",
+      "description": "The type used for update operations of the MoTest.",
       "properties": {
         "tags": {
           "type": "object",

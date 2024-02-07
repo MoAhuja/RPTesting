@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Microsoft.TypeSpec.ProviderHub.Controller;
 
-namespace Microsoft.MyResourceProvider.Service.Models
+namespace Microsoft.Porter.Service.Models
 {
     /// <summary>
     /// Helper for merging canonical ArmResourceBase models as part of a PUT or PATCH operation

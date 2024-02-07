@@ -1,4 +1,13 @@
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.csproj.AssemblyReference.cache
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.AssemblyInfoInputs.cache
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.AssemblyInfo.cs
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.csproj.CoreCompileInputs.cache
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.MvcApplicationPartsAssemblyInfo.cache
+C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.sourcelink.json
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\nuget.config
+C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\onebox\registrations\Microsoft.Porter\moTest.json
+C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\onebox\registrations\Private.Porter.json
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\stylecop.json
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\testRP.exe
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\testRP.deps.json
@@ -14,13 +23,6 @@ C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\typespec.dll
 C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\typespec.pdb
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.csproj.AssemblyReference.cache
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.GeneratedMSBuildEditorConfig.editorconfig
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.AssemblyInfoInputs.cache
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.AssemblyInfo.cs
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.csproj.CoreCompileInputs.cache
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.MvcApplicationPartsAssemblyInfo.cache
-C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.sourcelink.json
 C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\staticwebassets.build.json
 C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\staticwebassets.development.json
 C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\staticwebassets\msbuild.testRP.Microsoft.AspNetCore.StaticWebAssets.props
@@ -35,5 +37,3 @@ C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\refint\testRP.dll
 C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.pdb
 C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\testRP.genruntimeconfig.cache
 C:\code\RPTesting\testRP\src\testRP\obj\Debug\net7.0\ref\testRP.dll
-C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\onebox\registrations\Microsoft.MyResourceProvider\moTest.json
-C:\code\RPTesting\testRP\src\testRP\bin\Debug\net7.0\onebox\registrations\Private.Porter.json

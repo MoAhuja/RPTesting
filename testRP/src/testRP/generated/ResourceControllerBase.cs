@@ -5,7 +5,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace Microsoft.MyResourceProvider.Service.Controllers
+namespace Microsoft.Porter.Service.Controllers
 {
     public abstract partial class ResourceControllerBase : ControllerBase
     {

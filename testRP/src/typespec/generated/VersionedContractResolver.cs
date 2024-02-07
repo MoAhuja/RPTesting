@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Microsoft.TypeSpec.ProviderHub.Controller;
 
-namespace Microsoft.MyResourceProvider.Service
+namespace Microsoft.Porter.Service
 {
     /// <summary>
     /// Contract resolver for the service. This is generated to allow extensibility only.

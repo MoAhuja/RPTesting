@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.TypeSpec.ProviderHub.Controller;
 
-namespace Microsoft.MyResourceProvider.Service
+namespace Microsoft.Porter.Service
 {
     /// <summary>
     /// The main entry point for serialization.
@@ -17,8 +17,8 @@ namespace Microsoft.MyResourceProvider.Service
     {
         private VersionedSerializer()
         {
-            ServiceVersions = new MyResourceProviderServiceVersions();
-            ServiceVersionComparer = new VersionComparer(new MyResourceProviderServiceVersions());
+            ServiceVersions = new PorterServiceVersions();
+            ServiceVersionComparer = new VersionComparer(new PorterServiceVersions());
         }
 
         /// <summary>
