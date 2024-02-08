@@ -24,14 +24,19 @@ interface Operations extends Azure.ResourceManager.Operations {}
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-path-segment-invalid-chars" "Existing Template"
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-key-invalid-chars" "Existing template"
 @doc("A Private.Porter resource")
-model MoTest is TrackedResource<MoTestProperties> {
+
+
+model SolutionInputsResource is TrackedResource<SolutionInputsResourceProperties> {
   @doc("The name of the moTest resource")
   @pattern("^[a-zA-Z0-9-]{3,24}$")
-  @key("Name")
+  @key("name")
   @segment("moTest")
   @path
   name: string;
+  
 }
+
+
 
 @doc("The status of the current operation.")
 @Azure.Core.lroStatus
@@ -52,11 +57,38 @@ enum ProvisioningState {
 }
 
 @doc("Details of the Contoso Database.")
-model MoTestProperties {
+model SolutionInputsResourceProperties {
   @visibility("read")
   @doc("The status of the last operation.")
   provisioningState?: ProvisioningState;
+
+  parameters?: Array<Parameter>;
 }
 
-@armResourceOperations
-interface moTest extends TrackedResourceOperations<MoTest, MoTestProperties> {}
+
+model Parameter {
+  name: string;
+  type?: string;
+  //default : Record<unknown>;
+  exclusiveMinimum?: integer;
+  exclusiveMaximum?: integer;
+  isRequired: boolean;
+  maximum?: integer;
+  minimum?: integer;
+  description?: string;
+  maxLength?: integer;
+  minLength?: integer;
+
+  ApplicableOperations: Array<string>;
+
+
+
+}
+
+
+@armResourceOperations(SolutionInputsResource)
+//interface SolutionInputsResources extends TrackedResourceOperations<SolutionInputsResource, SolutionInputsResourceProperties> {}@armResourceOperations(Metadata)
+interface SolutionInputsResources {
+  get is ArmResourceRead<SolutionInputsResource>;
+  createOrUpdate is ArmResourceCreateOrReplaceAsync<SolutionInputsResource>;
+}

@@ -19,4 +19,10 @@
     <TypeSpecCompile Include="typespec\main.tsp" OutputDir="$(MSBuildProjectDirectory)" Options="arm-types-path=../../../../../common-types/resource-management" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Compile Include="generated\**" />
+
+
+	</ItemGroup>
+
 </Project>
