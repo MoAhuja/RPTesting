@@ -3,6 +3,7 @@
 ##
 ## Get latest from `dotnet new gitignore`
 **/generated/** 
+testRP/src/typespec/swagger
 
 # dotenv files
 .env
