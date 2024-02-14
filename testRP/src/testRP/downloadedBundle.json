@@ -1,6 +1,14 @@
 {
   "credentials": {
+    "credentialOnlyNeededForUpgrade": {
+      "applyTo": [
+        "upgrade"
+      ],
+      "env": "fakeEnvVar",
+      "required": true
+    },
     "passwordNeededFromUser": {
+      "description": "passwordNeededFromUser description explaining why it\u0027s needed",
       "env": "passwordStoredInEnvVar",
       "required": true
     },
@@ -38,8 +46,8 @@
     },
     "sh.porter": {
       "commit": "be5c66a9",
-      "manifest": "IyBUaGlzIGlzIHRoZSBjb25maWd1cmF0aW9uIGZvciBQb3J0ZXIKIyBZb3UgbXVzdCBkZWZpbmUgc3RlcHMgZm9yIGVhY2ggYWN0aW9uLCBidXQgdGhlIHJlc3QgaXMgb3B0aW9uYWwKIyBTZWUgaHR0cHM6Ly9nZXRwb3J0ZXIub3JnL2J1bmRsZS9tYW5pZmVzdC9maWxlLWZvcm1hdC8gZm9yIGEgZGVzY3JpcHRpb24gb2YgYWxsIHRoZSBhbGxvd2VkIGZpZWxkcyBpbiB0aGlzIGRvY3VtZW50LgojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYXV0aG9yLWJ1bmRsZXMgZm9yIGRvY3VtZW50YXRpb24gb24gaG93IHRvIGNvbmZpZ3VyZSB5b3VyIGJ1bmRsZS4KIyBVbmNvbW1lbnQgb3V0IHRoZSBzZWN0aW9ucyBiZWxvdyB0byB0YWtlIGZ1bGwgYWR2YW50YWdlIG9mIHdoYXQgUG9ydGVyIGNhbiBkbyEKCiMgT3B0aW9uYWwgaW5kaWNhdG9yIG9mIHRoZSByZXNvdXJjZSB0eXBlIG9mIHRoaXMgZmlsZQpzY2hlbWFUeXBlOiBCdW5kbGUKCiMgVmVyc2lvbiBvZiB0aGUgcG9ydGVyLnlhbWwgc2NoZW1hIHVzZWQgYnkgdGhpcyBmaWxlLgpzY2hlbWFWZXJzaW9uOiAxLjAuMQoKIyBOYW1lIG9mIHRoZSBidW5kbGUKbmFtZTogcG9ydGVyLWhlbGxvCgojIFZlcnNpb24gb2YgdGhlIGJ1bmRsZS4gQ2hhbmdlIHRoaXMgZWFjaCB0aW1lIHlvdSBtb2RpZnkgYSBwdWJsaXNoZWQgYnVuZGxlLgp2ZXJzaW9uOiAwLjQuMAoKIyBEZXNjcmlwdGlvbiBvZiB0aGUgYnVuZGxlIGFuZCB3aGF0IGl0IGRvZXMuCmRlc2NyaXB0aW9uOiAiQW4gZXhhbXBsZSBQb3J0ZXIgY29uZmlndXJhdGlvbiIKCgojIFJlZ2lzdHJ5IHdoZXJlIHRoZSBidW5kbGUgaXMgcHVibGlzaGVkIHRvIGJ5IGRlZmF1bHQKcmVnaXN0cnk6ICJtb3BvcnRlcnJlZ2lzdHJ5LmF6dXJlY3IuaW8iCgojIElmIHlvdSB3YW50IHRvIGN1c3RvbWl6ZSB0aGUgRG9ja2VyZmlsZSBpbiB1c2UsIHVuY29tbWVudCB0aGUgbGluZSBiZWxvdyBhbmQgdXBkYXRlIHRoZSByZWZlcmVuY2VkIGZpbGUuIAojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYnVuZGxlL2N1c3RvbS1kb2NrZXJmaWxlLwojZG9ja2VyZmlsZTogdGVtcGxhdGUuRG9ja2VyZmlsZQoKcGFyYW1ldGVyczoKICAtIG5hbWU6IHRmdmFycwogICAgdHlwZTogZmlsZQogICAgIyBUaGlzIGRlc2lnbmF0ZXMgdGhlIHBhdGggd2l0aGluIHRoZSBpbnN0YWxsZXIgdG8gcGxhY2UgdGhlIHBhcmFtZXRlciB2YWx1ZQogICAgcGF0aDogL2NuYWIvYXBwL3RlcnJhZm9ybS90ZXJyYWZvcm0udGZ2YXJzLmpzb24KICAgICMgSGVyZSB3ZSB0ZWxsIFBvcnRlciB0aGF0IHRoZSB2YWx1ZSBmb3IgdGhpcyBwYXJhbWV0ZXIgc2hvdWxkIGNvbWUgZnJvbSB0aGUgJ3RmdmFycycgb3V0cHV0CiAgICBzb3VyY2U6CiAgICAgIG91dHB1dDogdGZ2YXJzCgogIC0gbmFtZTogc3RyaW5nV2l0aEJhc2ljUHJvcGVydGllcwogICAgdHlwZTogc3RyaW5nCiAgICBkZXNjcmlwdGlvbjogc3RyaW5nV2l0aEJhc2ljUHJvcGVydGllc19kZXNjcmlwdGlvbgogICAgZGVmYXVsdDogZHVtbXlSRwogICAgYXBwbHlUbzoKICAgICAgLSBpbnN0YWxsCgogIC0gbmFtZTogc3RyaW5nV2l0aExlbmd0aFJlc3RyaWN0aW9ucwogICAgdHlwZTogc3RyaW5nCiAgICBkZWZhdWx0OiBkdW1teVJHCiAgICBhcHBseVRvOgogICAgICAtIGluc3RhbGwKICAgIG1pbkxlbmd0aDogMwogICAgbWF4TGVuZ3RoOiAxMAoKICAtIG5hbWU6IHN0cmluZ1dpdGhBbGxvd2VkVmFsdWVzCiAgICB0eXBlOiBzdHJpbmcKICAgIGVudW06CiAgICAtIG9wdGlvbkEKICAgIC0gb3B0aW9uQgogICAgLSBvcHRpb25DCiAgICAtIG9wdGlvbkQKICAgIGRlZmF1bHQ6IG9wdGlvbkEKICAgICRjb21tZW50OiBBenVyZQoKICAtIG5hbWU6IGR1bW15SnNvbkNvbmZpZ1dpdGhEZWZhdWx0VmFsdWVzCiAgICB0eXBlOiBvYmplY3QKICAgIHBhdGg6IC9jbmFiL2FwcC9jb25maWcuanNvbgogICAgZGVmYXVsdDoKICAgICAgbG9nTGV2ZWw6IDExCiAgICAgIGRlYnVnOiB0cnVlCgogIC0gbmFtZTogaW50ZWdlclBhcmFtZXRlcldpdGhNaW5NYXgKICAgIHR5cGU6IGludGVnZXIKICAgIG1pbmltdW06IDEKICAgIG1heGltdW06IDExCiAgICBhcHBseVRvOiBbInVwZ3JhZGUiXQoKICAtIG5hbWU6IGludGVnZXJQYXJhbWV0ZXJXaXRoRXhjbHVzaXZlUmFuZ2UKICAgIHR5cGU6IGludGVnZXIKICAgIGV4Y2x1c2l2ZU1pbmltdW06IDAKICAgIGV4Y2x1c2l2ZU1heGltdW06IDIxCiAgCiAgLSBuYW1lOiBib29sZWFuUGFyYW1ldGVyV2l0aERlZmF1bHQKICAgIHR5cGU6IGJvb2xlYW4KICAgIGRlZmF1bHQ6IGZhbHNlCiAgCiAgLSBuYW1lOiBhcnJheU9mU3RyaW5ncwogICAgdHlwZTogYXJyYXkKICAgIG1pbkl0ZW1zOiAyCiAgICBpdGVtczogdHJ1ZQogICAgCgoKb3V0cHV0czoKICAtIG5hbWU6IHRmdmFycwogICAgdHlwZTogZmlsZQogICAgIyBUaGlzIGRlc2lnbmF0ZXMgdGhlIHBhdGggd2l0aGluIHRoZSBpbnN0YWxsZXIgdG8gcmVhZCB0aGUgb3V0cHV0IGZyb20KICAgIHBhdGg6IC9jbmFiL2FwcC90ZXJyYWZvcm0vdGVycmFmb3JtLnRmdmFycy5qc29uCgoKCgojIERlY2xhcmUgYW5kIG9wdGlvbmFsbHkgY29uZmlndXJlIHRoZSBtaXhpbnMgdXNlZCBieSB0aGUgYnVuZGxlCm1peGluczoKICAtIGV4ZWMKCmNyZWRlbnRpYWxzOgogIC0gbmFtZTogcGFzc3dvcmROZWVkZWRGcm9tVXNlcgogICAgZW52OiBwYXNzd29yZFN0b3JlZEluRW52VmFyCiAgICByZXF1aXJlZDogdHJ1ZQogIC0gbmFtZTogcGFzc3dvcmRPcGVyYXRpb25Gcm9tVXNlcgogICAgZW52OiBzb21lRW52VmFyCiAgICByZXF1aXJlZDogZmFsc2UKICAtIG5hbWU6IHBhc3N3b3JkV2l0aFJlcXVpcmVkTm90U3BlY2lmaWMKICAgIHBhdGg6IC9teVBhdGgKICAgIGVudjogQUJDX0RFRgoKIyBEZWZpbmUgdGhlIHN0ZXBzIHRoYXQgc2hvdWxkIGV4ZWN1dGUgd2hlbiB0aGUgYnVuZGxlIGlzIGluc3RhbGxlZAppbnN0YWxsOgogIC0gZXhlYzoKICAgICAgZGVzY3JpcHRpb246ICJJbnN0YWxsIEhlbGxvIFdvcmxkIgogICAgICBjb21tYW5kOiAuL2hlbHBlcnMuc2gKICAgICAgYXJndW1lbnRzOgogICAgICAgIC0gaW5zdGFsbAogICAgICAgIC0gJHtidW5kbGUuY3JlZGVudGlhbHMucGFzc3dvcmR9CgojIERlZmluZSB0aGUgc3RlcHMgdGhhdCBzaG91bGQgZXhlY3V0ZSB3aGVuIHRoZSBidW5kbGUgaXMgdXBncmFkZWQKdXBncmFkZToKICAtIGV4ZWM6CiAgICAgIGRlc2NyaXB0aW9uOiAiV29ybGQgMi4wIgogICAgICBjb21tYW5kOiAuL2hlbHBlcnMuc2gKICAgICAgYXJndW1lbnRzOgogICAgICAgIC0gdXBncmFkZQoKIyBEZWZpbmUgdGhlIHN0ZXBzIHRoYXQgc2hvdWxkIGV4ZWN1dGUgd2hlbiB0aGUgYnVuZGxlIGlzIHVuaW5zdGFsbGVkCnVuaW5zdGFsbDoKICAtIGV4ZWM6CiAgICAgIGRlc2NyaXB0aW9uOiAiVW5pbnN0YWxsIEhlbGxvIFdvcmxkIgogICAgICBjb21tYW5kOiAuL2hlbHBlcnMuc2gKICAgICAgYXJndW1lbnRzOgogICAgICAgIC0gdW5pbnN0YWxsCgojIEJlbG93IGlzIGFuIGV4YW1wbGUgb2YgaG93IHRvIGRlZmluZSBjcmVkZW50aWFscwojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYXV0aG9yLWJ1bmRsZXMvI2NyZWRlbnRpYWxzCiNjcmVkZW50aWFsczoKIyAgLSBuYW1lOiBrdWJlY29uZmlnCiMgICAgcGF0aDogL2hvbWUvbm9ucm9vdC8ua3ViZS9jb25maWcKIyAgLSBuYW1lOiB1c2VybmFtZQojICAgIGVudjogVVNFUk5BTUUKCiMgQmVsb3cgaXMgYW4gZXhhbXBsZSBvZiBob3cgdG8gZGVmaW5lIHBhcmFtZXRlcnMKIyBTZWUgaHR0cHM6Ly9nZXRwb3J0ZXIub3JnL2F1dGhvci1idW5kbGVzLyNwYXJhbWV0ZXJzCiNwYXJhbWV0ZXJzOgojICAtIG5hbWU6IG15c3FsX3VzZXIKIyAgICB0eXBlOiBzdHJpbmcKIyAgICBkZWZhdWx0OiB3b3JkcHJlc3MKCiMgQmVsb3cgaXMgYW4gZXhhbXBsZSBvZiBob3cgdG8gZGVmaW5lIHN0YXRlIHZhcmlhYmxlcwojIGZvciB0aGUgdGVycmFmb3JtIG1peGluLiBUaGlzIGFsbG93cyB5b3UgdG8gdHJhY2sKIyB0ZXJyYWZvcm0gc3RhdGUgdXNpbmcgdGhlIGJ1bmRsZSBpbnN0ZWFkIG9mIGNvbmZpZ3VyaW5nCiMgYSByZW1vdGUgYmFja2VuZC4KIyBTZWUgaHR0cHM6Ly9nZXRwb3J0ZXIub3JnL2F1dGhvci1idW5kbGVzLyNzdGF0ZQojc3RhdGU6CiMgIC0gbmFtZTogdGZzdGF0ZQojICAgIHBhdGg6IHRlcnJhZm9ybS90ZXJyYWZvcm0udGZzdGF0ZQojICAtIG5hbWU6IHRmdmFycwojICAgIHBhdGg6IHRlcnJhZm9ybS90ZXJyYWZvcm0udGZ2YXJzLmpzb24K",
-      "manifestDigest": "28c0dff092d7f5ec16b6a55c71db7958e618d4e76daa704bff832b5f28e78cb2",
+      "manifest": "IyBUaGlzIGlzIHRoZSBjb25maWd1cmF0aW9uIGZvciBQb3J0ZXIKIyBZb3UgbXVzdCBkZWZpbmUgc3RlcHMgZm9yIGVhY2ggYWN0aW9uLCBidXQgdGhlIHJlc3QgaXMgb3B0aW9uYWwKIyBTZWUgaHR0cHM6Ly9nZXRwb3J0ZXIub3JnL2J1bmRsZS9tYW5pZmVzdC9maWxlLWZvcm1hdC8gZm9yIGEgZGVzY3JpcHRpb24gb2YgYWxsIHRoZSBhbGxvd2VkIGZpZWxkcyBpbiB0aGlzIGRvY3VtZW50LgojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYXV0aG9yLWJ1bmRsZXMgZm9yIGRvY3VtZW50YXRpb24gb24gaG93IHRvIGNvbmZpZ3VyZSB5b3VyIGJ1bmRsZS4KIyBVbmNvbW1lbnQgb3V0IHRoZSBzZWN0aW9ucyBiZWxvdyB0byB0YWtlIGZ1bGwgYWR2YW50YWdlIG9mIHdoYXQgUG9ydGVyIGNhbiBkbyEKCiMgT3B0aW9uYWwgaW5kaWNhdG9yIG9mIHRoZSByZXNvdXJjZSB0eXBlIG9mIHRoaXMgZmlsZQpzY2hlbWFUeXBlOiBCdW5kbGUKCiMgVmVyc2lvbiBvZiB0aGUgcG9ydGVyLnlhbWwgc2NoZW1hIHVzZWQgYnkgdGhpcyBmaWxlLgpzY2hlbWFWZXJzaW9uOiAxLjAuMQoKIyBOYW1lIG9mIHRoZSBidW5kbGUKbmFtZTogcG9ydGVyLWhlbGxvCgojIFZlcnNpb24gb2YgdGhlIGJ1bmRsZS4gQ2hhbmdlIHRoaXMgZWFjaCB0aW1lIHlvdSBtb2RpZnkgYSBwdWJsaXNoZWQgYnVuZGxlLgp2ZXJzaW9uOiAwLjQuMAoKIyBEZXNjcmlwdGlvbiBvZiB0aGUgYnVuZGxlIGFuZCB3aGF0IGl0IGRvZXMuCmRlc2NyaXB0aW9uOiAiQW4gZXhhbXBsZSBQb3J0ZXIgY29uZmlndXJhdGlvbiIKCgojIFJlZ2lzdHJ5IHdoZXJlIHRoZSBidW5kbGUgaXMgcHVibGlzaGVkIHRvIGJ5IGRlZmF1bHQKcmVnaXN0cnk6ICJtb3BvcnRlcnJlZ2lzdHJ5LmF6dXJlY3IuaW8iCgojIElmIHlvdSB3YW50IHRvIGN1c3RvbWl6ZSB0aGUgRG9ja2VyZmlsZSBpbiB1c2UsIHVuY29tbWVudCB0aGUgbGluZSBiZWxvdyBhbmQgdXBkYXRlIHRoZSByZWZlcmVuY2VkIGZpbGUuIAojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYnVuZGxlL2N1c3RvbS1kb2NrZXJmaWxlLwojZG9ja2VyZmlsZTogdGVtcGxhdGUuRG9ja2VyZmlsZQoKcGFyYW1ldGVyczoKICAtIG5hbWU6IHRmdmFycwogICAgdHlwZTogZmlsZQogICAgIyBUaGlzIGRlc2lnbmF0ZXMgdGhlIHBhdGggd2l0aGluIHRoZSBpbnN0YWxsZXIgdG8gcGxhY2UgdGhlIHBhcmFtZXRlciB2YWx1ZQogICAgcGF0aDogL2NuYWIvYXBwL3RlcnJhZm9ybS90ZXJyYWZvcm0udGZ2YXJzLmpzb24KICAgICMgSGVyZSB3ZSB0ZWxsIFBvcnRlciB0aGF0IHRoZSB2YWx1ZSBmb3IgdGhpcyBwYXJhbWV0ZXIgc2hvdWxkIGNvbWUgZnJvbSB0aGUgJ3RmdmFycycgb3V0cHV0CiAgICBzb3VyY2U6CiAgICAgIG91dHB1dDogdGZ2YXJzCgogIC0gbmFtZTogc3RyaW5nV2l0aEJhc2ljUHJvcGVydGllcwogICAgdHlwZTogc3RyaW5nCiAgICBkZXNjcmlwdGlvbjogc3RyaW5nV2l0aEJhc2ljUHJvcGVydGllc19kZXNjcmlwdGlvbgogICAgZGVmYXVsdDogZHVtbXlSRwogICAgYXBwbHlUbzoKICAgICAgLSBpbnN0YWxsCgogIC0gbmFtZTogc3RyaW5nV2l0aExlbmd0aFJlc3RyaWN0aW9ucwogICAgdHlwZTogc3RyaW5nCiAgICBkZWZhdWx0OiBkdW1teVJHCiAgICBhcHBseVRvOgogICAgICAtIGluc3RhbGwKICAgIG1pbkxlbmd0aDogMwogICAgbWF4TGVuZ3RoOiAxMAoKICAtIG5hbWU6IHN0cmluZ1dpdGhBbGxvd2VkVmFsdWVzCiAgICB0eXBlOiBzdHJpbmcKICAgIGVudW06CiAgICAtIG9wdGlvbkEKICAgIC0gb3B0aW9uQgogICAgLSBvcHRpb25DCiAgICAtIG9wdGlvbkQKICAgIGRlZmF1bHQ6IG9wdGlvbkEKICAgICRjb21tZW50OiA8QXBwbGljYWJsZUNsb3Vkcz5BenVyZTwvQXBwbGljYWJsZUNsb3Vkcz4KICAKICAtIG5hbWU6IHNlbnNpdGl2ZVBhcmFtZXRlcgogICAgdHlwZTogc3RyaW5nICAKICAgIGRlZmF1bHQ6IHNvbWVTZW5zaXRpdmVWYWx1ZQogICAgc2Vuc2l0aXZlOiB0cnVlCgoKICAtIG5hbWU6IGR1bW15SnNvbkNvbmZpZ1dpdGhEZWZhdWx0VmFsdWVzCiAgICB0eXBlOiBvYmplY3QKICAgIHBhdGg6IC9jbmFiL2FwcC9jb25maWcuanNvbgogICAgZGVmYXVsdDoKICAgICAgbG9nTGV2ZWw6IDExCiAgICAgIGRlYnVnOiB0cnVlCgogIC0gbmFtZTogY29tbW9uUGFyYW1ldGVyRm9yTXVsdGlwbGVDbG91ZAogICAgdHlwZTogaW50ZWdlcgogICAgbWluaW11bTogMQogICAgbWF4aW11bTogMTEKICAgIGFwcGx5VG86IFsidXBncmFkZSJdCiAgICAkY29tbWVudDogPEFwcGxpY2FibGVDbG91ZHM\u002BQXp1cmUsUG93ZXJQbGF0Zm9ybTwvQXBwbGljYWJsZUNsb3Vkcz4KCiAgLSBuYW1lOiBpbnRlZ2VyUGFyYW1ldGVyV2l0aEV4Y2x1c2l2ZVJhbmdlCiAgICB0eXBlOiBpbnRlZ2VyCiAgICBleGNsdXNpdmVNaW5pbXVtOiAwCiAgICBleGNsdXNpdmVNYXhpbXVtOiAyMQogIAogIC0gbmFtZTogYm9vbGVhblBhcmFtZXRlcldpdGhEZWZhdWx0CiAgICB0eXBlOiBib29sZWFuCiAgICBkZWZhdWx0OiBmYWxzZQogIAogIC0gbmFtZTogYXJyYXlPZlN0cmluZ3MKICAgIHR5cGU6IGFycmF5CiAgICBtaW5JdGVtczogMgogICAgaXRlbXM6IHRydWUKICAgIAoKCm91dHB1dHM6CiAgLSBuYW1lOiB0ZnZhcnMKICAgIHR5cGU6IGZpbGUKICAgICMgVGhpcyBkZXNpZ25hdGVzIHRoZSBwYXRoIHdpdGhpbiB0aGUgaW5zdGFsbGVyIHRvIHJlYWQgdGhlIG91dHB1dCBmcm9tCiAgICBwYXRoOiAvY25hYi9hcHAvdGVycmFmb3JtL3RlcnJhZm9ybS50ZnZhcnMuanNvbgoKCgoKIyBEZWNsYXJlIGFuZCBvcHRpb25hbGx5IGNvbmZpZ3VyZSB0aGUgbWl4aW5zIHVzZWQgYnkgdGhlIGJ1bmRsZQptaXhpbnM6CiAgLSBleGVjCgpjcmVkZW50aWFsczoKICAtIG5hbWU6IHBhc3N3b3JkTmVlZGVkRnJvbVVzZXIKICAgIGVudjogcGFzc3dvcmRTdG9yZWRJbkVudlZhcgogICAgcmVxdWlyZWQ6IHRydWUKICAgIGRlc2NyaXB0aW9uOiBwYXNzd29yZE5lZWRlZEZyb21Vc2VyIGRlc2NyaXB0aW9uIGV4cGxhaW5pbmcgd2h5IGl0J3MgbmVlZGVkCiAgLSBuYW1lOiBwYXNzd29yZE9wZXJhdGlvbkZyb21Vc2VyCiAgICBlbnY6IHNvbWVFbnZWYXIKICAgIHJlcXVpcmVkOiBmYWxzZQogIC0gbmFtZTogcGFzc3dvcmRXaXRoUmVxdWlyZWROb3RTcGVjaWZpYwogICAgcGF0aDogL215UGF0aAogICAgZW52OiBBQkNfREVGCiAgLSBuYW1lOiBjcmVkZW50aWFsT25seU5lZWRlZEZvclVwZ3JhZGUKICAgIGVudjogZmFrZUVudlZhcgogICAgYXBwbHlUbzogWyJ1cGdyYWRlIl0KICAgIAogICAgCgojIERlZmluZSB0aGUgc3RlcHMgdGhhdCBzaG91bGQgZXhlY3V0ZSB3aGVuIHRoZSBidW5kbGUgaXMgaW5zdGFsbGVkCmluc3RhbGw6CiAgLSBleGVjOgogICAgICBkZXNjcmlwdGlvbjogIkluc3RhbGwgSGVsbG8gV29ybGQiCiAgICAgIGNvbW1hbmQ6IC4vaGVscGVycy5zaAogICAgICBhcmd1bWVudHM6CiAgICAgICAgLSBpbnN0YWxsCiAgICAgICAgLSAke2J1bmRsZS5jcmVkZW50aWFscy5wYXNzd29yZH0KCiMgRGVmaW5lIHRoZSBzdGVwcyB0aGF0IHNob3VsZCBleGVjdXRlIHdoZW4gdGhlIGJ1bmRsZSBpcyB1cGdyYWRlZAp1cGdyYWRlOgogIC0gZXhlYzoKICAgICAgZGVzY3JpcHRpb246ICJXb3JsZCAyLjAiCiAgICAgIGNvbW1hbmQ6IC4vaGVscGVycy5zaAogICAgICBhcmd1bWVudHM6CiAgICAgICAgLSB1cGdyYWRlCgojIERlZmluZSB0aGUgc3RlcHMgdGhhdCBzaG91bGQgZXhlY3V0ZSB3aGVuIHRoZSBidW5kbGUgaXMgdW5pbnN0YWxsZWQKdW5pbnN0YWxsOgogIC0gZXhlYzoKICAgICAgZGVzY3JpcHRpb246ICJVbmluc3RhbGwgSGVsbG8gV29ybGQiCiAgICAgIGNvbW1hbmQ6IC4vaGVscGVycy5zaAogICAgICBhcmd1bWVudHM6CiAgICAgICAgLSB1bmluc3RhbGwKCiMgQmVsb3cgaXMgYW4gZXhhbXBsZSBvZiBob3cgdG8gZGVmaW5lIGNyZWRlbnRpYWxzCiMgU2VlIGh0dHBzOi8vZ2V0cG9ydGVyLm9yZy9hdXRob3ItYnVuZGxlcy8jY3JlZGVudGlhbHMKI2NyZWRlbnRpYWxzOgojICAtIG5hbWU6IGt1YmVjb25maWcKIyAgICBwYXRoOiAvaG9tZS9ub25yb290Ly5rdWJlL2NvbmZpZwojICAtIG5hbWU6IHVzZXJuYW1lCiMgICAgZW52OiBVU0VSTkFNRQoKIyBCZWxvdyBpcyBhbiBleGFtcGxlIG9mIGhvdyB0byBkZWZpbmUgcGFyYW1ldGVycwojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYXV0aG9yLWJ1bmRsZXMvI3BhcmFtZXRlcnMKI3BhcmFtZXRlcnM6CiMgIC0gbmFtZTogbXlzcWxfdXNlcgojICAgIHR5cGU6IHN0cmluZwojICAgIGRlZmF1bHQ6IHdvcmRwcmVzcwoKIyBCZWxvdyBpcyBhbiBleGFtcGxlIG9mIGhvdyB0byBkZWZpbmUgc3RhdGUgdmFyaWFibGVzCiMgZm9yIHRoZSB0ZXJyYWZvcm0gbWl4aW4uIFRoaXMgYWxsb3dzIHlvdSB0byB0cmFjawojIHRlcnJhZm9ybSBzdGF0ZSB1c2luZyB0aGUgYnVuZGxlIGluc3RlYWQgb2YgY29uZmlndXJpbmcKIyBhIHJlbW90ZSBiYWNrZW5kLgojIFNlZSBodHRwczovL2dldHBvcnRlci5vcmcvYXV0aG9yLWJ1bmRsZXMvI3N0YXRlCiNzdGF0ZToKIyAgLSBuYW1lOiB0ZnN0YXRlCiMgICAgcGF0aDogdGVycmFmb3JtL3RlcnJhZm9ybS50ZnN0YXRlCiMgIC0gbmFtZTogdGZ2YXJzCiMgICAgcGF0aDogdGVycmFmb3JtL3RlcnJhZm9ybS50ZnZhcnMuanNvbgo=",
+      "manifestDigest": "17eb9283409288afa5a1327bad41cfc959ef72071dd568d680bec9c1f08d6f8b",
       "mixins": {
         "exec": {
           "version": "v1.0.15"
@@ -59,6 +67,12 @@
       "default": false,
       "type": "boolean"
     },
+    "commonParameterForMultipleCloud-parameter": {
+      "$comment": "\u003CApplicableClouds\u003EAzure,PowerPlatform\u003C/ApplicableClouds\u003E",
+      "maximum": 11,
+      "minimum": 1,
+      "type": "integer"
+    },
     "dummyJsonConfigWithDefaultValues-parameter": {
       "default": {
         "debug": true,
@@ -69,11 +83,6 @@
     "integerParameterWithExclusiveRange-parameter": {
       "exclusiveMaximum": 21,
       "exclusiveMinimum": 0,
-      "type": "integer"
-    },
-    "integerParameterWithMinMax-parameter": {
-      "maximum": 11,
-      "minimum": 1,
       "type": "integer"
     },
     "porter-debug-parameter": {
@@ -90,8 +99,13 @@
       "description": "Supports persisting state for bundles. Porter internal parameter that should not be set manually.",
       "type": "string"
     },
+    "sensitiveParameter-parameter": {
+      "default": "someSensitiveValue",
+      "type": "string",
+      "writeOnly": true
+    },
     "stringWithAllowedValues-parameter": {
-      "$comment": "Azure",
+      "$comment": "\u003CApplicableClouds\u003EAzure\u003C/ApplicableClouds\u003E",
       "default": "optionA",
       "enum": [
         "optionA",
@@ -124,8 +138,8 @@
   "description": "An example Porter configuration",
   "invocationImages": [
     {
-      "contentDigest": "sha256:d6ccc944c65ad6ff3820cb559160a63961eb43660ffd0efb5364b6bb9d0bf340",
-      "image": "moporterregistry.azurecr.io/porter-hello@sha256:d6ccc944c65ad6ff3820cb559160a63961eb43660ffd0efb5364b6bb9d0bf340",
+      "contentDigest": "sha256:2bc46d228c0e679b455c97ad0e6a1ae92cccc032ae484e1c0652c45f62fe05a8",
+      "image": "moporterregistry.azurecr.io/porter-hello@sha256:2bc46d228c0e679b455c97ad0e6a1ae92cccc032ae484e1c0652c45f62fe05a8",
       "imageType": "docker",
       "mediaType": "application/vnd.docker.distribution.manifest.v2\u002Bjson",
       "size": 2411
@@ -157,6 +171,16 @@
         "env": "BOOLEANPARAMETERWITHDEFAULT"
       }
     },
+    "commonParameterForMultipleCloud": {
+      "applyTo": [
+        "upgrade"
+      ],
+      "definition": "commonParameterForMultipleCloud-parameter",
+      "destination": {
+        "env": "COMMONPARAMETERFORMULTIPLECLOUD"
+      },
+      "required": true
+    },
     "dummyJsonConfigWithDefaultValues": {
       "definition": "dummyJsonConfigWithDefaultValues-parameter",
       "destination": {
@@ -167,16 +191,6 @@
       "definition": "integerParameterWithExclusiveRange-parameter",
       "destination": {
         "env": "INTEGERPARAMETERWITHEXCLUSIVERANGE"
-      },
-      "required": true
-    },
-    "integerParameterWithMinMax": {
-      "applyTo": [
-        "upgrade"
-      ],
-      "definition": "integerParameterWithMinMax-parameter",
-      "destination": {
-        "env": "INTEGERPARAMETERWITHMINMAX"
       },
       "required": true
     },
@@ -192,6 +206,12 @@
       "description": "Supports persisting state for bundles. Porter internal parameter that should not be set manually.",
       "destination": {
         "path": "/porter/state.tgz"
+      }
+    },
+    "sensitiveParameter": {
+      "definition": "sensitiveParameter-parameter",
+      "destination": {
+        "env": "SENSITIVEPARAMETER"
       }
     },
     "stringWithAllowedValues": {

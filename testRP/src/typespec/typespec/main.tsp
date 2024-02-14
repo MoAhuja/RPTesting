@@ -29,12 +29,15 @@ interface Operations extends Azure.ResourceManager.Operations {}
 model SolutionInputsResource is TrackedResource<SolutionInputsResourceProperties> {
   @doc("The name of the moTest resource")
   @pattern("^[a-zA-Z0-9-]{3,24}$")
-  @key("name")
+  @key("solutionName")
   @segment("moTest")
   @path
   name: string;
   
 }
+
+
+
 
 
 
@@ -62,33 +65,72 @@ model SolutionInputsResourceProperties {
   @doc("The status of the last operation.")
   provisioningState?: ProvisioningState;
 
+  imageName: string;
+  imageTag: string;
+
+  @visibility("read")
   parameters?: Array<Parameter>;
+  @visibility("read")
+  credentials?: Array<Credential>;
 }
+
+
 
 
 model Parameter {
+ 
+  @doc("Parameter name")
   name: string;
+
+  @doc("Data type of the parameter (string, int, etc)")
   type?: string;
-  //default : Record<unknown>;
+  //default: unknown;
+
+  @doc("Minimum value allowed (> than value specified).  Only applies to numerics.")
   exclusiveMinimum?: integer;
+
+  @doc("Maximum value allowed (< than value specified). Only applies to numerics.")
   exclusiveMaximum?: integer;
+
+  @doc("Whether the parameter is required or not")
   isRequired: boolean;
+
+  @doc("Maximum value allowed (>= value specified). Only applies to numerics.")
   maximum?: integer;
+
+  @doc("Minimum value allowed (<= value specified). Only applies to numerics.")
   minimum?: integer;
+
+  @doc("Description of the parameter")
   description?: string;
+
+  @doc("The maximum length of the parameter. Only applies to strings.")
   maxLength?: integer;
+
+  @doc("The minimum length of the parameter. Only applies to strings.")
   minLength?: integer;
 
-  ApplicableOperations: Array<string>;
+  @doc("Which operations this parameter applies to. If not specified, this parameter applies to all operations.")
+  applicableOperations: Array<string>;
+
+  @doc("Which Microsoft cloud(s) the parameter applies to")
+  microsoftTargets: Array<string>;
 
 
 
 }
 
+model Credential {
+  name: string;
+  isRequired: boolean;
+  applicableOperations: Array<string>;
+}
 
-@armResourceOperations(SolutionInputsResource)
-//interface SolutionInputsResources extends TrackedResourceOperations<SolutionInputsResource, SolutionInputsResourceProperties> {}@armResourceOperations(Metadata)
-interface SolutionInputsResources {
+
+@armResourceOperations
+interface ImageTagResources {
   get is ArmResourceRead<SolutionInputsResource>;
   createOrUpdate is ArmResourceCreateOrReplaceAsync<SolutionInputsResource>;
 }
+
+

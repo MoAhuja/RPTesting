@@ -5,7 +5,7 @@ emit:
 options:
   "@azure-tools/typespec-autorest":
     emitter-output-dir: "{output-dir}"
-    azure-resource-provider-folder: ./swagger/MyResourceProvider/resource-manager
+    azure-resource-provider-folder: ./swagger/MoRP/resource-manager
     examples-directory: ./examples
     new-line: lf
   "@azure-tools/typespec-providerhub-controller":
@@ -15,3 +15,5 @@ options:
     include-cancellation-token: true
     include-subscription-lifecycle-controller: true
     include-versioning-classes: true
+ 
+

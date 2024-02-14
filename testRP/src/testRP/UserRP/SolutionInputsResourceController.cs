@@ -40,29 +40,35 @@ namespace Microsoft.Porter.Service.Controllers
                 //Required so that the enum list from the CNAB Parameters definition is mapped as null instead of a list with 0 entries.
                 cfg.AllowNullCollections = true;
 
-                // Do not validate ignores mapping the _default property from the UnifiedDeployment.Parameter model
+                //Maps the applicableClouds property from the CNAB Parameters definition to the MicrosoftTargets property in the Porter Parameters definition
+                cfg.CreateMap<ReadBundleLibrary.Models.UnifiedDeployment.Parameter, Parameter>().ForMember(dest => dest.MicrosoftTargets, opt => opt.MapFrom(src => src.applicableClouds));
 
-                cfg.CreateMap<ReadBundleLibrary.Models.UnifiedDeployment.Parameter, Parameter>();
-                //cfg.CreateMap<ReadBundleLibrary.Models.UnifiedDeployment.Parameter, Parameter>().ForMember(dest => dest._default, opt => opt.Ignore());
-                //    cfg.CreateMap<ReadBundleLibrary.Models.UnifiedDeployment.Parameter, Parameter>()
-                //    .ForMember(
-                //        dest => dest._default,
-                //        opt => opt.MapFrom(src => new Microsoft.Porter.Service.Models.Object()));
+            });
+
+            var credentialMapperConfig = new MapperConfiguration(cfg =>
+            {
+                //Required so that the enum list from the CNAB Parameters definition is mapped as null instead of a list with 0 entries.
+                cfg.AllowNullCollections = true;
+                cfg.CreateMap<ReadBundleLibrary.Models.UnifiedDeployment.Credential, Credential>();
+      
             });
 
             var parameterAutomapper = new Mapper(paramMapperConfig);
+            var credentialAutomapper = new Mapper(credentialMapperConfig);
 
             var inputs = _bundleLibrary.RetrieveBundleRequiredInputs(endpoint, repository, tag);
 
-            //TODO setup an automapper to convert the model from the bundle library to the API model
+            //Create a new solution resource response object
             SolutionInputsResource resource = new SolutionInputsResource();
-            resource.Properties = new SolutionInputsResourceProperties();
-
-           
+            resource.Properties = new SolutionInputsResourceProperties();    
+            resource.Properties.ImageName = "porter-hello";
+            resource.Properties.ImageTag = "v0.4.0";
 
 
             List<Parameter> udParameters = parameterAutomapper.Map<List<Parameter>>(inputs.Parameters);
+            List<Credential> credentials = credentialAutomapper.Map<List<Credential>>(inputs.Credentials);
             resource.Properties.Parameters = udParameters.ToArray();
+            resource.Properties.Credentials = credentials.ToArray();
 
             //var parameter = _parameterAutomapper.Map<Parameter>(definitionModel);
             return Task.FromResult<IActionResult>(Ok(resource));

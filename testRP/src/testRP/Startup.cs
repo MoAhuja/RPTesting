@@ -3,8 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using ReadBundleLibrary;
 using ReadBundleLibrary.Helpers.BundleFetcher;
+using System.Text.Json;
 
 public class Startup
 {
@@ -19,14 +22,17 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers()
-                .AddNewtonsoftJson();
+                .AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    //options.SerializerSettings.Formatting = Formatting.Indented; 
+                });
+                
 
         services.AddSingleton<BundleLibrary>();
 
         //We want to use the ACR fetcher to get the bundle
         services.AddSingleton<IBundleFetcher, ACRBundleFetcher>();
-
-
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,25 +52,6 @@ public class Startup
         app.UseEndpoints(endpoints =>
             endpoints.MapControllers()
         );
-
-        //app.UseEndpoints(endpoints =>
-        //{
-
-        //    endpoints.Map("{*url}", async context =>
-        //    {
-        //        System.Console.WriteLine("Request details:");
-        //        System.Console.WriteLine($"Method: {context.Request.Method}");
-        //        System.Console.WriteLine($"Path: {context.Request.Path}");
-        //        System.Console.WriteLine($"QueryString: {context.Request.QueryString}");
-        //        System.Console.WriteLine("Headers:");
-        //        foreach (var header in context.Request.Headers)
-        //        {
-        //            System.Console.WriteLine($"\t{header.Key}: {header.Value}");
-        //        }
-        //        context.Response.StatusCode = 200;
-        //    });
-        //});
-
     
     }
 }
